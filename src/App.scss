@@ -1,27 +1,24 @@
-@import "../node_modules/bootstrap/scss/functions";
-
-
-
 :root{
   --primary:#000;
   --second:#ccc;
   --background-color:#fff;
   --accent: #10863b;
-  --foother-color:#333333;
-  --background-header:rgba(0,0,0,.3);
+  --footer-color:#333333;
+  --background-header: rgb(152, 253, 152);
 }
 
 *{
   margin: 0;
   padding: 0;
 }
+
 body {
   color: var(--primary);
   background-color: var(--background-color);
 }
 
 header{
-background-color: var(--background-header);
+  background-color: var(--background-header);
   padding: 20px 0;
   width: 100%;
 }
@@ -176,9 +173,23 @@ background-color: var(--background-header);
 }
 
 .wrapper{
+  margin: 20px auto 0 auto;
 
-  margin: 0 auto;
+  .title {
+    text-align: center;
+  }
 }
-.wrapper h1{
-  text-align: center;
+
+.form-phone {
+  div {
+    margin: 10px 0;
+    &:first-child { margin-top: 0 }
+    &:last-child { margin-bottom: 0 }
+  }
+}
+
+.wrapper-color {
+  background: var(--background-header);
+  padding: 20px 0;
+  margin: 20px 0 0 0;
 }
