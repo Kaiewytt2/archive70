@@ -1,9 +1,12 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import {Header} from './components/Header'
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import React, { useEffect, useState } from "react";
+import {Container} from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const App = () => {
@@ -12,10 +15,9 @@ const App = () => {
 
 
     <div>
-
     <Header/>
 
-      <div>
+      <Container>
 
         <form action="https://formsubmit.co/kaiewytt22@gmail.com" method="POST">
 
@@ -49,9 +51,20 @@ const App = () => {
         <div>
           <button type="submit">Send</button>
         </div>
-
         </form>
-      </div>
+
+          <div className={"container wrapper"}>
+              <h1>
+                  Архивация и хранение документов
+              </h1>
+              <p>
+                  Наш архив находится в г.Томске и оказывает услуги по хранению, архивной
+                  обработке и переплету документов на бумажных носителях организациям всех форм
+                  собственности, в том числе государственным учреждениям, в Сибирском федеральном округе.
+              </p>
+          </div>
+
+      </Container>
     </div>
 
   );
