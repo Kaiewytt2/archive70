@@ -5,10 +5,11 @@ import PhoneInput from 'react-phone-number-input'
 import React, {useState} from "react";
 import {Container} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import InputMask from 'react-input-mask';
 
 
 const App = () => {
-    const [value, setValue] = useState()
+    const [value, setValue, onChange] = useState()
     return (
         <div>
             <Header/>
@@ -29,9 +30,7 @@ const App = () => {
                         <div>
                             <input type="hidden" name="_template" value="table"/>
                         </div>
-                        <div>
-                            <input type="hidden" name="_next" value="http://localhost:3000/"/>
-                        </div>
+
                         <div>
                             <input type="hidden" name="_captcha" value="false"/>
                         </div>
@@ -43,14 +42,18 @@ const App = () => {
                                    required/>
                         </div>
                         <div>
-                            <PhoneInput
-                                placeholder="Enter phone number"
-                                name="Номер телефона"
+                            <InputMask
+                                mask="+7 (999) 999-99-99"
+                                maskChar="_"
                                 value={value}
-                                onChange={setValue}/>
+                                onChange={onChange}
+                                className={'form-control'}
+                                placeholder="Ваш номер телефона"
+                                name="Номер телефона отправителя"
+                                required/>
                         </div>
                         <div>
-                            <button className={'btn btn-success'} type="submit">Send</button>
+                            <button className={'confirmation-button'} type="submit">Отправить заявку</button>
                         </div>
                     </form>
                 </Container>

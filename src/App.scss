@@ -38,6 +38,10 @@ header{
 .header-info{
   height: 60px;
   width: auto;
+  margin: 0 20px;
+  &:last-child{
+    margin-right: 0;
+  }
 }
 
 .header-button{
@@ -193,3 +197,32 @@ header{
   padding: 20px 0;
   margin: 20px 0 0 0;
 }
+
+.confirmation-button {
+  display: inline-block;
+  padding: 5px 50px;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #1c7e01; /* Цвет рамки кнопки */
+  border-radius: 5px;
+  color: #fff; /* Цвет текста кнопки */
+  background-color: #1c7e01; /* Основной цвет кнопки */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Стиль при наведении курсора */
+.confirmation-button:hover {
+  background-color: #115000; /* Цвет кнопки при наведении */
+  border-color: #115000; /* Цвет рамки кнопки при наведении */
+  color: #fff; /* Цвет текста кнопки при наведении */
+}
+
+/* Стиль при активации кнопки (нажатие) */
+.confirmation-button:active {
+  background-color: #2cd000; /* Цвет кнопки при нажатии */
+  border-color: #2cd000; /* Цвет рамки кнопки при нажатии */
+  color: #fff; /* Цвет текста кнопки при нажатии */
+}
+
